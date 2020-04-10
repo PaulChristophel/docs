@@ -7,7 +7,7 @@ by users in the training.
 
 * Git setup on local machine
 * GitHub account provisioned and accessible
-* GitHub account granted access to gt-salt-oit repository
+* GitHub account granted access to `gt-salt-oit` repository
 * SSH key created and public key stored in GitHub
 * Azure labs virtual machine provisioned and accessible
 
