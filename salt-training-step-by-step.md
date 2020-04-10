@@ -51,14 +51,11 @@ in, checkout that branch, and to push your local branch back to GitHub.
   sudo curl https://sse.salt.gatech.edu/bootstrap/enroll | sudo bash -s "<branch-name>" "ai-trn-m01.salt.gatech.edu"
   ```
 1. Edit the minion configuration.
-  1. Open the minion configuration
-  ```
+  1. Open the minion configuration ```
   sudo vim /etc/salt/miniond./minion.conf
   ```
-  1. Add the following lines to the end of the file:
-  ```
-  id: <gt-username>
-  ```
+  1. Add the following lines to the end of the file:```
+  id: <gt-username>```
   1. Restart the minion.
   ```
   sudo systemctl restart salt-minion
