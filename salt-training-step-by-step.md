@@ -7,7 +7,7 @@ Goals for training:
 * Successfully deploy a SALT minion
 * Successfully deploy Chrony to a SALT minion
 * Successfully deploy FireEye to a SALT minion
-* Successfully deploy Qualis to a SALT minion
+* Successfully deploy Qualys to a SALT minion
 
 ## Pre-requisites
 
@@ -127,13 +127,13 @@ salt-call state.apply chrony
 Next, we'll install FireEye.
 
 ```
-salt-cell state.apply fireeye
+salt-call state.apply fireeye
 ```
 
-Last, we'll wrap up with installing Qualis.
+Last, we'll wrap up with installing Qualys.
 
 ```
-salt-cell state.apply qualys
+salt-call state.apply qualys
 ```
 
 ## Deploying a custom SALT state
