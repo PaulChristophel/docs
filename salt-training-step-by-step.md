@@ -54,13 +54,14 @@ push your branch to GitHub.
 
 ```
 git clone git@github.gatech.edu:delegated-admin/gt-salt-oit.git
-git checkout -b <gt-username>
-git push -u origin <gt-username>
+git checkout -b <primary-account>
+git push -u origin <primary-account>
 ```
 
 ### Azure labs VM
 
-For testing and development, we will be using an Azure labs virtual machine.
+For testing and development, we will be using an Azure labs virtual machine to
+act as our minion.
 
 Start your virtual machine:
 
@@ -73,31 +74,34 @@ look similar to the following:
 ssh -p 51283 train@ml-lab-472b6307-8340-49f2-9b37-cdbc831fb8e7.eastus.cloudapp.azure.com
 ```
 
-Run the SSH command in a terminal to connect to your VM.
+Run the SSH command in a terminal to connect to your VM. The first time that you
+connect to your VM, please reset the resolv.conf file:
+
+```
+cd ~/
+sudo ./reset-resolv-conf.sh
+```
 
 ## Installing the SALT minion
 
-1. SSH to your provisioned Azure labs VM.
-1. Run the resolv.conf reset script:
-  ```
-  cd ~/
-  sudo ./reset-resolv-conf.sh
-  ```
-1. Install SALT minion from the internal bootstrap site:
-  ```
-  sudo curl https://sse.salt.gatech.edu/bootstrap/enroll | sudo bash -s "<branch-name>" "ai-trn-m01.salt.gatech.edu"
-  ```
-1. Edit the minion configuration.
-  1. Open the minion configuration
-  ```
-  sudo vim /etc/salt/miniond./minion.conf
-  ```
-  1. Add the following lines to the end of the file:
-  ```
-  id: <gt-username>
-  ```
-  1. Restart the minion.
-  ```
-  sudo systemctl restart salt-minion
-  ```
+Connect to your Azure labs VM and install the SALT minion:
+
+```
+sudo curl https://sse.salt.gatech.edu/bootstrap/enroll | sudo bash -s "<branch-name>" "ai-trn-m01.salt.gatech.edu"
+
+```
+
+Add your ID (id: <primary-account>) to the end of the minion's configuration file. Please note that the space following the colon is required.
+
+```
+sudo vim /etc/salt/minion.d/minion.conf
+```
+
+TODO: add diff here with id line syntax.
+
+After adding the ID, restart the minion:
+
+```
+sudo systemctl restart salt-minion
+```
 
