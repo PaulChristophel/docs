@@ -43,11 +43,11 @@ ssh-keygen -t rsa
 ```
 
 Once successful, two files will be created: `id_rsa` and `id_rsa.pub`. Upload the
-contents of the id_rsa.pub to GitHub:
+contents of the `id_rsa.pub` to GitHub:
 
 https://github.gatech.edu/settings/ssh/new
 
-## Cloning the repository
+### Cloning the repository
 
 Clone the repository to your local machine, create a local working branch, and
 push your branch to GitHub.
@@ -57,6 +57,23 @@ git clone git@github.gatech.edu:delegated-admin/gt-salt-oit.git
 git checkout -b <gt-username>
 git push -u origin <gt-username>
 ```
+
+### Azure labs VM
+
+For testing and development, we will be using an Azure labs virtual machine.
+
+Start your virtual machine:
+
+https://labs.azure.com/virtualmachines
+
+Once your VM is started, you will be given an SSH command to connect. It will
+look similar to the following:
+
+```
+ssh -p 51283 train@ml-lab-472b6307-8340-49f2-9b37-cdbc831fb8e7.eastus.cloudapp.azure.com
+```
+
+Run the SSH command in a terminal to connect to your VM.
 
 ## Installing the SALT minion
 
