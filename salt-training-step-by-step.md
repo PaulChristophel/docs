@@ -109,10 +109,12 @@ After adding the ID, restart the SALT minion:
 sudo systemctl restart salt-minion
 ```
 
+At this point, the SALT master needs to accept the SALT minion.
+
 ## Deploying applications to an establish SALT minion
 
-SALT comes prepackaged with default configuration setups for common apps. Here
-will walk through the steps necessary to deploy chrony to a SALT minion.
+SALT comes prepackaged with default configuration setups for common applications. 
+Here will walk through the steps necessary to deploy chrony to a SALT minion.
 
 First up, we'll install Chrony.
 
