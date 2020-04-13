@@ -109,11 +109,31 @@ After adding the ID, restart the SALT minion:
 sudo systemctl restart salt-minion
 ```
 
-## Deploy chrony
+## Deploying applications to an establish SALT minion
 
 SALT comes prepackaged with default configuration setups for common apps. Here
 will walk through the steps necessary to deploy chrony to a SALT minion.
 
+First up, we'll install Chrony.
+
 ```
 salt-call state.apply chrony
 ```
+
+Next, we'll install FireEye.
+
+```
+salt-cell state.apply fireeye
+```
+
+Last, we'll wrap up with installing Qualis.
+
+```
+salt-cell state.apply qualys
+```
+
+## Deploying a custom SALT state
+
+TODO: do we want to go to the same level as our initial training or stop with
+the off the shelf's?
+
