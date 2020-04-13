@@ -91,7 +91,7 @@ sudo curl https://sse.salt.gatech.edu/bootstrap/enroll | sudo bash -s "<branch-n
 
 ```
 
-Add your ID (id: <primary-account>) to the end of the minion's configuration file. Please note that the space following the colon is required.
+Add your ID (id: \<primary-account\>) to the end of the minion's configuration file. Please note that the space following the colon is required.
 
 ```
 sudo vim /etc/salt/minion.d/minion.conf
