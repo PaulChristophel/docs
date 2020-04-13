@@ -14,7 +14,8 @@ by users participating in the training.
 
 ### Git installation
 
-Git is available for download for Mac OS X, Windows, and Linux/Unix platforms:
+Git will need to be installed on your local machine. Git is available for 
+download for Mac OS X, Windows, and Linux/Unix platforms:
 
 https://git-scm.com/downloads
 
@@ -28,7 +29,7 @@ Enable 2FA:
 
 https://github.gatech.edu/settings/security
 
-Once setup is complete, verify access to the SALT repo:
+Once setup is complete, verify access to the SALT repository:
 
 https://github.gatech.edu/delegated-admin/gt-salt-oit
 
@@ -41,7 +42,7 @@ key:
 ssh-keygen -t rsa
 ```
 
-Once successful, two files will be created: id_rsa and id_rsa.pub. Upload the
+Once successful, two files will be created: `id_rsa` and `id_rsa.pub`. Upload the
 contents of the id_rsa.pub to GitHub:
 
 https://github.gatech.edu/settings/ssh/new
