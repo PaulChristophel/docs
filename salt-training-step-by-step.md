@@ -5,7 +5,9 @@ by users participating in the training.
 
 Goals for training:
 * Successfully deploy a SALT minion
-* Successfully deploy fireeye to a SALT minion
+* Successfully deploy Chrony to a SALT minion
+* Successfully deploy FireEye to a SALT minion
+* Successfully deploy Qualis to a SALT minion
 
 ## Pre-requisites
 
