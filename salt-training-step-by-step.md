@@ -3,6 +3,10 @@
 This guide is intended to be used in conjunction with the SALT training course
 by users participating in the training.
 
+Goals for training:
+* Successfully deploy a SALT minion
+* Successfully deploy fireeye to a SALT minion
+
 ## Pre-requisites
 
 * Git installed on local machine
@@ -82,7 +86,7 @@ cd ~/
 sudo ./reset-resolv-conf.sh
 ```
 
-## Installing the SALT minion
+## Setting up the SALT minion
 
 Connect to your Azure labs VM and install the SALT minion:
 
@@ -99,9 +103,17 @@ sudo vim /etc/salt/minion.d/minion.conf
 
 TODO: add diff here with id line syntax.
 
-After adding the ID, restart the minion:
+After adding the ID, restart the SALT minion:
 
 ```
 sudo systemctl restart salt-minion
 ```
 
+## Deploy chrony
+
+SALT comes prepackaged with default configuration setups for common apps. Here
+will walk through the steps necessary to deploy chrony to a SALT minion.
+
+```
+salt-call state.apply chrony
+```
