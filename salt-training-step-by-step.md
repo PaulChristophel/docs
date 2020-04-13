@@ -8,6 +8,7 @@ by users participating in the training.
 * Git installed on local machine
 * GitHub account provisioned and 2FA setup
 * SSH key created and public key stored in GitHub
+* Repository cloned to local machine
 * Azure labs virtual machine started and accessible
 * PSA account provisioned and 2FA setup
 
@@ -33,29 +34,28 @@ https://github.gatech.edu/delegated-admin/gt-salt-oit
 
 ### SSH key maintenance
 
-1. Open a terminal.
-2. Run the following command:
+Run the following command in a termainl window (or Git Bash) to create an SSH
+key:
 
 ```
 ssh-keygen -t rsa
 ```
 
-  1. Enter a passphrase (twice).
+Once successful, two files will be created: id_rsa and id_rsa.pub. Upload the
+contents of the id_rsa.pub to GitHub:
 
-### SSH key upload to GitHub
-
-TODO: steps to upload the ssh key to github.
+https://github.gatech.edu/settings/ssh/new
 
 ## Cloning the repository
+
+Clone the repository to your local machine, create a local working branch, and
+push your branch to GitHub.
 
 ```
 git clone git@github.gatech.edu:delegated-admin/gt-salt-oit.git
 git checkout -b <gt-username>
 git push -u origin <gt-username>
 ```
-
-These commands will clone the repository, create a local branch for you to work
-in, checkout that branch, and to push your local branch back to GitHub.
 
 ## Installing the SALT minion
 
